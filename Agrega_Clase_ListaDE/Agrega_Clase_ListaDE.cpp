@@ -113,16 +113,9 @@ void Lde::eliminar(int &codigo)
 				}
 				else //Eliminar el ultimo
 				{
-					if (apun->dato == codigo)
-					{
-						aux = apun->sig;
-						apun->sig = NULL;
-						delete aux;
-					}
-					else
-					{
-						cout << "El nodo a eliminar no existe" << endl;
-					}
+					aux = apun->sig;
+					apun->sig = NULL;
+					delete aux;
 				}
 			}
 			else  //De lo contrario es porque codigo es mayor y apun sera igual al ultimo nodo
